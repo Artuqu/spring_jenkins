@@ -16,14 +16,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class SpringJenkinsApplicationTests {
 
 	@Autowired
-	private MockMvc mvc;
-	SpringJenkinsApplicationTests(MockMvc mvc){
-		this.mvc=mvc;
-	}
+	private MockMvc  mvc;
+
 
 	@Test
 	void returnText() throws Exception {
-		mvc.perform(get("/"))
+		this.mvc.perform(get("/"))
 				.andDo(print())
 				.andExpect(status().isOk())
 				.andExpect(content().string("Hello Jenkins "));
