@@ -22,9 +22,5 @@ pipeline {
             sh "mvn clean heroku:deploy"
             }
         }
-
-
-
-
     }
 }
