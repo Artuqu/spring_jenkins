@@ -26,12 +26,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 
@@ -47,8 +41,7 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.3</version>
 				<configuration>
-<!--					<appName>jenkinsspring</appName>-->
-<!--					when you have connection to gitHub name is not necessary-->
+					<appName>jenkinsspring</appName>
 				<processTypes>
 					<web>java -jar -Dserver.port=$PORT target/${project.build.finalName}.jar</web>
 				</processTypes>
